@@ -1,0 +1,1395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BrightFrame — Sales Clarity for Industrial Companies</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*,*::before,*::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg:       #F8F5F0;
+  --bg-2:     #EDEAE3;
+  --bg-3:     #D8D4CC;
+  --ink:      #1A1816;
+  --ink-2:    #2C2824;
+  --mid:      #555550;
+  --rule:     #D0CCC4;
+  --rule-2:   #DDD9D2;
+  --navy:     #9E2020;
+  --navy-2:   #7E1818;
+  --navy-lt:  #F5EAEA;
+  --red-lt:   #FDF3F3;
+  --red-dk:   #7A1010;
+  --grn-lt:   #F2FAF4;
+  --grn-dk:   #155A28;
+  --serif:    'Libre Baskerville', Georgia, serif;
+  --cond:     'Barlow Condensed', sans-serif;
+  --sans:     'Barlow', system-ui, sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg:      #1A1816;
+    --bg-2:    #242018;
+    --bg-3:    #2C2C2C;
+    --ink:     #F0EDE8;
+    --ink-2:   #D0CCC8;
+    --mid:     #8A8880;
+    --rule:    #383530;
+    --rule-2:  #2E2C28;
+    --navy:    #D46060;
+    --navy-2:  #E07070;
+    --navy-lt: #181E28;
+    --red-lt:  #2A1010;
+    --red-dk:  #F08080;
+    --grn-lt:  #0E2016;
+    --grn-dk:  #6DC98A;
+  }
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrap { max-width: 1100px; margin: 0 auto; padding: 0 56px; }
+
+.ov {
+  font-family: var(--cond);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--navy);
+  display: block;
+  margin-bottom: 16px;
+}
+
+/* ── NAV ── */
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 200;
+  background: #222018;
+  border-bottom: 2px solid var(--rule);
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 56px;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.nav-mark {
+  width: 28px; height: 28px;
+  background: var(--navy);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+
+.nav-name {
+  font-family: var(--cond);
+  font-size: 19px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #F8F5F0;
+}
+
+.nav-links {
+  display: flex;
+  align-items: stretch;
+  height: 64px;
+}
+
+.nav-link {
+  font-family: var(--cond);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.45);
+  text-decoration: none;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  border-left: 1px solid rgba(255,255,255,0.08);
+  transition: color 0.15s, background 0.15s;
+  white-space: nowrap;
+}
+.nav-link:hover { color: rgba(255,255,255,0.85); background: rgba(255,255,255,0.06); }
+
+.nav-cta {
+  font-family: var(--cond);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #fff;
+  background: #9E2020;
+  text-decoration: none;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  border-left: 1px solid rgba(255,255,255,0.08);
+  transition: background 0.15s;
+  white-space: nowrap;
+}
+.nav-cta:hover { background: #7E1818; }
+
+/* ── HERO ── */
+#hero {
+  padding: 152px 0 0;
+  background: #F8F5F0;
+  border-bottom: 1px solid var(--rule);
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 72px;
+  align-items: center;
+  padding-bottom: 72px;
+}
+
+.hero-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.hero-ey-line {
+  width: 28px; height: 2px;
+  background: var(--navy);
+  flex-shrink: 0;
+}
+
+.hero-ey-text {
+  font-family: var(--cond);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--navy);
+}
+
+.hero-hl {
+  font-family: var(--serif);
+  font-size: clamp(44px, 5.8vw, 76px);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.022em;
+  color: var(--ink);
+}
+
+.hero-hl em {
+  font-style: italic;
+  color: var(--navy);
+}
+
+.hero-body {
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.75;
+  color: var(--mid);
+  margin-bottom: 32px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--cond);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #fff;
+  background: #9E2020;
+  padding: 16px 32px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  min-height: 52px;
+  transition: background 0.15s;
+}
+.btn:hover { background: #7E1818; }
+
+.hero-note {
+  display: block;
+  margin-top: 14px;
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--mid);
+}
+
+/* Stats bar */
+.stats-bar {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 2px solid #1A1816;
+}
+
+.stat {
+  padding: 36px 40px;
+  border-right: 1px solid var(--rule);
+}
+.stat:first-child { padding-left: 0; }
+.stat:last-child  { border-right: none; }
+
+.stat-n {
+  font-family: var(--cond);
+  font-size: 60px;
+  font-weight: 700;
+  color: var(--navy);
+  line-height: 1;
+  margin-bottom: 10px;
+  letter-spacing: -0.025em;
+}
+
+.stat-l {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--mid);
+  line-height: 1.6;
+}
+
+/* ── RECOGNITION — moved before diagram ── */
+#recognition {
+  background: #EDEAE3;
+  padding: 112px 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+.sec-header {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 56px;
+  align-items: start;
+  margin-bottom: 56px;
+}
+
+.sec-header h2 {
+  font-family: var(--serif);
+  font-size: clamp(24px, 2.8vw, 36px);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.015em;
+  color: var(--ink);
+  border-left: 4px solid var(--navy);
+  padding-left: 20px;
+}
+
+.quotes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background: var(--rule);
+  gap: 1px;
+  border: 1px solid var(--rule);
+}
+
+.quote-card {
+  background: var(--bg);
+  padding: 40px 36px;
+  border-top: 3px solid var(--navy);
+}
+
+.quote-n {
+  font-family: var(--cond);
+  font-size: 38px;
+  font-weight: 700;
+  color: var(--bg-3);
+  line-height: 1;
+  margin-bottom: 16px;
+  letter-spacing: -0.02em;
+}
+
+.quote-text {
+  font-family: var(--serif);
+  font-size: 17px;
+  font-style: italic;
+  font-weight: 400;
+  color: var(--ink-2);
+  line-height: 1.6;
+  margin-bottom: 14px;
+}
+
+.quote-tag {
+  font-family: var(--cond);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--mid);
+}
+
+/* ── CALLOUT ── */
+#callout {
+  background: #3D4F5C;
+  padding: 80px 0;
+}
+
+.callout-grid {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 56px;
+  align-items: center;
+}
+
+.callout-label {
+  font-family: var(--cond);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.45);
+}
+
+.callout-hl {
+  font-family: var(--serif);
+  font-size: clamp(26px, 3.2vw, 42px);
+  font-weight: 700;
+  line-height: 1.2;
+  color: #F8F5F0;
+  letter-spacing: -0.015em;
+}
+
+.callout-hl em {
+  font-style: italic;
+  font-weight: 400;
+  color: rgba(255,255,255,0.75);
+}
+
+/* ── PROBLEM ── */
+#problem {
+  background: var(--bg);
+  padding: 112px 0;
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+}
+
+.problem-intro {
+  margin-bottom: 52px;
+}
+
+.problem-intro h2 {
+  font-family: var(--serif);
+  font-size: clamp(26px, 3vw, 38px);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.015em;
+  color: var(--ink);
+  margin-bottom: 14px;
+}
+
+.problem-intro p {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--mid);
+  line-height: 1.75;
+  max-width: 620px;
+}
+
+/* Diagram */
+.diag-wrap {
+  border: 1px solid var(--rule);
+  overflow-x: auto;
+}
+
+.diag-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  min-width: 580px;
+}
+
+.diag-table thead { background: #222018; }
+
+.diag-th {
+  padding: 18px 26px;
+  font-family: var(--cond);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  text-align: left;
+}
+.diag-th.col-a  { color: rgba(248,245,240,0.65); width: 46%; }
+.diag-th.col-b  { color: #F8F5F0; width: 46%; }
+.diag-th.col-vs {
+  width: 8%;
+  text-align: center;
+  color: rgba(255,255,255,0.3);
+  border-left: 1px solid rgba(255,255,255,0.12);
+  border-right: 1px solid rgba(255,255,255,0.12);
+}
+
+.diag-table tbody tr { border-bottom: 1px solid var(--rule); }
+.diag-table tbody tr:last-child { border-bottom: none; }
+
+.diag-td {
+  padding: 20px 26px;
+  vertical-align: middle;
+  background: var(--bg);
+}
+
+.diag-td.vs-col {
+  background: var(--bg-2);
+  border-left: 1px solid var(--rule);
+  border-right: 1px solid var(--rule);
+  text-align: center;
+  vertical-align: middle;
+}
+
+.diag-td.vs-col span {
+  font-family: var(--cond);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--bg-3);
+}
+
+.diag-cell { display: flex; align-items: center; gap: 14px; }
+
+.diag-n {
+  font-family: var(--cond);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--bg-3);
+  flex-shrink: 0;
+  min-width: 22px;
+}
+
+.diag-txt {
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--ink-2);
+  line-height: 1.5;
+}
+
+.diag-table tbody tr.bad  .diag-td    { background: var(--red-lt); }
+.diag-table tbody tr.bad  .diag-txt   { color: var(--red-dk); font-weight: 600; }
+.diag-table tbody tr.bad  .diag-n     { color: var(--red-dk); opacity: 0.4; }
+.diag-table tbody tr.good .diag-td    { background: var(--grn-lt); }
+.diag-table tbody tr.good .diag-txt   { color: var(--grn-dk); font-weight: 600; }
+.diag-table tbody tr.good .diag-n     { color: var(--grn-dk); opacity: 0.4; }
+.diag-table tbody tr.bad  .diag-td.vs-col,
+.diag-table tbody tr.good .diag-td.vs-col { background: var(--bg-2); }
+
+/* ── PROCESS ── */
+#process {
+  background: #EDEAE3;
+  padding: 112px 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+.flow-bar {
+  display: flex;
+  align-items: stretch;
+  border: 1px solid var(--rule);
+  margin-bottom: 1px;
+  overflow-x: auto;
+}
+
+.flow-node {
+  flex: 1;
+  padding: 20px 22px;
+  background: var(--bg);
+  border-right: 1px solid var(--rule);
+  border-top: 4px solid var(--navy);
+  text-align: center;
+  min-width: 120px;
+}
+.flow-node:last-child { border-right: none; }
+.flow-node.dim {
+  border-top-color: var(--rule);
+  background: var(--bg-2);
+}
+
+.flow-n {
+  font-family: var(--cond);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  color: var(--mid);
+  display: block;
+  margin-bottom: 5px;
+}
+
+.flow-lbl {
+  font-family: var(--cond);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+.flow-node.dim .flow-lbl { color: var(--mid); font-size: 12px; }
+
+.flow-arr {
+  display: flex;
+  align-items: center;
+  padding: 0 2px;
+  background: var(--bg-2);
+  border-right: 1px solid var(--rule);
+  border-top: 4px solid var(--rule);
+  flex-shrink: 0;
+}
+
+/* Step cards — ghost numbers removed per Pentagram */
+.step-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background: var(--rule);
+  gap: 1px;
+  border: 1px solid var(--rule);
+  border-top: none;
+}
+
+.step-card {
+  background: var(--bg);
+  padding: 52px 44px;
+  border-top: 4px solid var(--rule);
+  transition: border-top-color 0.2s, background 0.2s;
+}
+.step-card:hover {
+  border-top-color: var(--navy);
+  background: var(--navy-lt);
+}
+
+.step-icon {
+  width: 44px; height: 44px;
+  margin-bottom: 24px;
+}
+
+.step-tag {
+  font-family: var(--cond);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--navy);
+  display: block;
+  margin-bottom: 10px;
+}
+
+.step-card h3 {
+  font-family: var(--serif);
+  font-size: 21px;
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.25;
+  margin-bottom: 14px;
+  letter-spacing: -0.01em;
+}
+
+.step-card p {
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--mid);
+  line-height: 1.8;
+}
+
+/* ── DELIVERABLES ── */
+#deliverables {
+  background: var(--bg);
+  padding: 112px 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+.del-grid {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 56px;
+  align-items: start;
+}
+
+.del-heading {
+  font-family: var(--serif);
+  font-size: clamp(22px, 2.5vw, 32px);
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+  margin-top: 4px;
+}
+
+.del-items {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: var(--rule);
+  gap: 1px;
+  border: 1px solid var(--rule);
+}
+
+.del-item {
+  background: var(--bg);
+  padding: 28px 28px;
+  display: flex;
+  gap: 14px;
+  align-items: baseline;
+}
+
+.del-dash {
+  font-family: var(--cond);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--navy);
+  flex-shrink: 0;
+}
+
+.del-text h4 {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 5px;
+  line-height: 1.3;
+}
+
+.del-text p {
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--mid);
+  line-height: 1.65;
+}
+
+/* ── CONTACT ── */
+#contact {
+  background: #EDEAE3;
+  padding: 112px 0;
+}
+
+.contact-top {
+  margin-bottom: 52px;
+}
+
+.contact-top h2 {
+  font-family: var(--serif);
+  font-size: clamp(26px, 3.2vw, 44px);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.018em;
+  color: var(--ink);
+  margin-bottom: 16px;
+}
+
+.contact-top p {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--mid);
+  line-height: 1.75;
+  max-width: 580px;
+  margin-bottom: 20px;
+}
+
+.contact-proof {
+  font-family: var(--serif);
+  font-size: 18px;
+  font-style: italic;
+  color: var(--navy);
+  border-left: 4px solid var(--navy);
+  padding-left: 18px;
+  line-height: 1.55;
+  max-width: 520px;
+}
+
+.contact-panels {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: var(--rule);
+  gap: 1px;
+  border: 1px solid var(--rule);
+}
+
+.contact-panel { background: var(--bg); padding: 48px 48px; }
+
+.promises { list-style: none; border-top: 2px solid #1A1816; margin-bottom: 40px; }
+
+.promise-row {
+  display: flex;
+  gap: 14px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--rule);
+  align-items: baseline;
+}
+.promise-row:last-child { border-bottom: none; }
+
+.promise-chk {
+  font-family: var(--cond);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--navy);
+  flex-shrink: 0;
+}
+
+.promise-txt {
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--ink-2);
+  line-height: 1.5;
+}
+
+.who-box {
+  background: #3D4F5C;
+  padding: 30px 32px;
+}
+
+.who-lbl {
+  font-family: var(--cond);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.4);
+  margin-bottom: 16px;
+  display: block;
+}
+
+.who-list { list-style: none; }
+
+.who-list li {
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(255,255,255,0.72);
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.who-list li:last-child { border-bottom: none; }
+
+.who-dot {
+  width: 5px; height: 5px;
+  background: rgba(255,255,255,0.35);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.f-group { margin-bottom: 20px; }
+
+.f-label {
+  display: block;
+  font-family: var(--cond);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+  margin-bottom: 8px;
+}
+
+input[type=text], input[type=email] {
+  width: 100%;
+  background: var(--bg-2);
+  border: 1px solid var(--rule);
+  border-top: 2px solid var(--rule);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 16px;
+  font-weight: 400;
+  padding: 13px 16px;
+  outline: none;
+  border-radius: 0;
+  -webkit-appearance: none;
+  transition: border-color 0.15s;
+}
+input:focus { border-color: var(--navy); border-top-color: var(--navy); }
+input::placeholder { color: var(--mid); opacity: 0.6; }
+input.err { border-top-color: var(--red-dk); }
+
+.f-err {
+  display: none;
+  font-family: var(--cond);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--red-dk);
+  margin: 8px 0;
+}
+
+.btn-submit {
+  width: 100%;
+  background: #9E2020;
+  color: #fff;
+  font-family: var(--cond);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  padding: 18px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.15s;
+  margin-top: 6px;
+  min-height: 54px;
+}
+.btn-submit:hover { background: #7E1818; }
+.btn-submit:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.f-note {
+  margin-top: 12px;
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--mid);
+  line-height: 1.6;
+}
+
+.f-field-err {
+  display: block;
+  font-family: var(--cond);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--red-dk);
+  margin-top: 5px;
+  min-height: 0;
+}
+
+/* Formspree Ajax hides/shows these via data attributes */
+[data-fs-success] { display: none; }
+[data-fs-success].f-ok { padding: 44px 0 8px; }
+[data-fs-error]:empty { display: none !important; }
+
+.f-ok { display: none; padding: 44px 0 8px; }
+.f-ok.show { display: block; }
+.f-ok h3 {
+  font-family: var(--serif);
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 10px;
+}
+.f-ok p { font-size: 15px; font-weight: 400; color: var(--mid); line-height: 1.7; }
+
+/* ── FOOTER — trust signal added per Fjord ── */
+footer {
+  background: #141210;
+  padding: 0 56px;
+}
+
+.footer-top {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  padding: 44px 0 36px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  align-items: start;
+}
+
+.footer-brand { }
+
+.footer-logo {
+  font-family: var(--cond);
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.6);
+  display: block;
+  margin-bottom: 8px;
+}
+
+.footer-tagline {
+  font-family: var(--serif);
+  font-size: 15px;
+  font-style: italic;
+  color: rgba(255,255,255,0.28);
+}
+
+/* Trust signal — Fjord's recommendation */
+.footer-trust {
+  border-left: 1px solid rgba(255,255,255,0.1);
+  padding-left: 40px;
+}
+
+.footer-trust-label {
+  font-family: var(--cond);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.28);
+  display: block;
+  margin-bottom: 14px;
+}
+
+.footer-contact-item {
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(255,255,255,0.55);
+  line-height: 1.8;
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.footer-contact-item span.lbl {
+  font-family: var(--cond);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.25);
+  flex-shrink: 0;
+  min-width: 52px;
+}
+
+.footer-btm {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 0;
+}
+
+.footer-loc {
+  font-family: var(--cond);
+  font-size: 11px;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.22);
+}
+
+/* ── FOCUS ── */
+a:focus-visible, button:focus-visible, input:focus-visible {
+  outline: 3px solid #9E2020;
+  outline-offset: 3px;
+}
+
+/* ── ANIMATIONS ── */
+@keyframes up {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.hero-eyebrow { animation: up 0.6s ease both 0.05s; }
+.hero-hl      { animation: up 0.7s ease both 0.12s; }
+.hero-right   { animation: up 0.7s ease both 0.22s; }
+.stats-bar    { animation: up 0.7s ease both 0.30s; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 960px) {
+  .hero-grid { grid-template-columns: 1fr; gap: 40px; }
+  .del-grid  { grid-template-columns: 1fr; gap: 28px; }
+  .contact-panels { grid-template-columns: 1fr; }
+  .footer-top { grid-template-columns: 1fr; gap: 28px; }
+  .footer-trust { border-left: none; padding-left: 0; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 28px; }
+}
+
+@media (max-width: 800px) {
+  .sec-header { grid-template-columns: 1fr; gap: 18px; }
+  .callout-grid { grid-template-columns: 1fr; gap: 16px; }
+  .quotes { grid-template-columns: 1fr; }
+  .step-cards { grid-template-columns: 1fr; }
+  .del-items { grid-template-columns: 1fr; }
+  .stats-bar { grid-template-columns: 1fr 1fr; }
+  .stat:last-child { border-top: 1px solid var(--rule); grid-column: 1/-1; }
+}
+
+@media (max-width: 640px) {
+  nav, footer { padding-left: 20px; padding-right: 20px; }
+  .wrap { padding: 0 20px; }
+  .nav-link { display: none; }
+  #hero { padding-top: 100px; }
+  #recognition, #callout, #problem, #process, #deliverables, #contact { padding: 72px 0; }
+  .contact-panel { padding: 32px 24px; }
+  .step-card { padding: 36px 26px; }
+  .hero-hl { font-size: 38px; }
+  .footer-btm { flex-direction: column; gap: 8px; align-items: flex-start; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo" aria-label="BrightFrame home">
+    <div class="nav-mark" style="background:#9E2020;">
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+        <rect x="1" y="1" width="5" height="5" fill="white" opacity="0.9"/>
+        <rect x="8" y="1" width="5" height="5" fill="white" opacity="0.5"/>
+        <rect x="1" y="8" width="5" height="5" fill="white" opacity="0.5"/>
+        <rect x="8" y="8" width="5" height="5" fill="white" opacity="0.18"/>
+      </svg>
+    </div>
+    <span class="nav-name">BrightFrame</span>
+  </a>
+  <div class="nav-links">
+    <a href="#process"      class="nav-link">Our Approach</a>
+    <a href="#deliverables" class="nav-link">What You Receive</a>
+    <a href="#contact"      class="nav-cta">Request a Breakdown</a>
+  </div>
+</nav>
+
+
+<!-- HERO -->
+<section id="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <div class="hero-eyebrow">
+          <div class="hero-ey-line"></div>
+          <span class="hero-ey-text">Industrial B2B · Vancouver &amp; Lower Mainland</span>
+        </div>
+        <h1 class="hero-hl">When capability<br>isn't <em>enough.</em></h1>
+      </div>
+      <div class="hero-right">
+        <p class="hero-body">Industrial companies lose work not because of what they do — but because buyers can't see it clearly. BrightFrame fixes that.</p>
+        <a href="#contact" class="btn">Request a Free Breakdown</a>
+        <span class="hero-note">No commitment · Response within one business day</span>
+      </div>
+    </div>
+    <div class="stats-bar">
+      <div class="stat">
+        <div class="stat-n">73%</div>
+        <div class="stat-l">of B2B buyers say vendor differentiation is unclear at first evaluation</div>
+      </div>
+      <div class="stat">
+        <div class="stat-n">2×</div>
+        <div class="stat-l">longer sales cycles when buyers cannot clearly compare vendors</div>
+      </div>
+      <div class="stat">
+        <div class="stat-n" style="color:#9E2020;">Price</div>
+        <div class="stat-l">becomes the default when value isn't communicated clearly — not capability</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- RECOGNITION — moved up per IDEO -->
+<section id="recognition">
+  <div class="wrap">
+    <div class="sec-header">
+      <span class="ov">Does this sound familiar?</span>
+      <h2>Most owners don't think they have a clarity problem. They think they have a pricing problem.</h2>
+    </div>
+    <div class="quotes">
+      <div class="quote-card">
+        <div class="quote-n">01</div>
+        <p class="quote-text">"We lose bids and never find out why."</p>
+        <span class="quote-tag">CEO · Metal Fabrication · 45 employees</span>
+      </div>
+      <div class="quote-card">
+        <div class="quote-n">02</div>
+        <p class="quote-text">"Our best salesperson is the owner. That doesn't scale."</p>
+        <span class="quote-tag">Head of Sales · Machining · 60 employees</span>
+      </div>
+      <div class="quote-card">
+        <div class="quote-n">03</div>
+        <p class="quote-text">"We know we're better. We just can't prove it."</p>
+        <span class="quote-tag">Owner · Industrial Manufacturing · 80 employees</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- CALLOUT -->
+<section id="callout">
+  <div class="wrap">
+    <div class="callout-grid">
+      <span class="callout-label">The core insight</span>
+      <p class="callout-hl">This is not a pricing problem.<br><em>It is a sales clarity problem.</em></p>
+    </div>
+  </div>
+</section>
+
+
+<!-- PROBLEM -->
+<section id="problem">
+  <div class="wrap">
+    <div class="problem-intro">
+      <span class="ov">What's happening</span>
+      <h2>Buyers default to price when they can't see the difference.</h2>
+      <p>Your capability is strong. But without a structured way to explain it, buyers have no clear way to choose you over a cheaper option.</p>
+    </div>
+
+    <div class="diag-wrap">
+      <table class="diag-table">
+        <thead>
+          <tr>
+            <th class="diag-th col-a">Without clarity — typical buyer journey</th>
+            <th class="diag-th col-vs">vs</th>
+            <th class="diag-th col-b">With BrightFrame clarity</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="diag-td"><div class="diag-cell"><span class="diag-n">01</span><span class="diag-txt">Buyer arrives with a new project</span></div></td>
+            <td class="diag-td vs-col" rowspan="5"><span>vs</span></td>
+            <td class="diag-td"><div class="diag-cell"><span class="diag-n">01</span><span class="diag-txt">Buyer arrives with a new project</span></div></td>
+          </tr>
+          <tr>
+            <td class="diag-td"><div class="diag-cell"><span class="diag-n">02</span><span class="diag-txt">Looks for capabilities — finds them unclear or inconsistent</span></div></td>
+            <td class="diag-td"><div class="diag-cell"><span class="diag-n">02</span><span class="diag-txt">Finds a clear, structured capability overview</span></div></td>
+          </tr>
+          <tr>
+            <td class="diag-td"><div class="diag-cell"><span class="diag-n">03</span><span class="diag-txt">Can't compare — differentiation isn't visible</span></div></td>
+            <td class="diag-td"><div class="diag-cell"><span class="diag-n">03</span><span class="diag-txt">Understands what sets you apart — without a conversation</span></div></td>
+          </tr>
+          <tr>
+            <td class="diag-td"><div class="diag-cell"><span class="diag-n">04</span><span class="diag-txt">Trust takes too long — risk feels high</span></div></td>
+            <td class="diag-td"><div class="diag-cell"><span class="diag-n">04</span><span class="diag-txt">Trust builds early — value is the conversation</span></div></td>
+          </tr>
+          <tr class="bad">
+            <td class="diag-td"><div class="diag-cell"><span class="diag-n">05</span><span class="diag-txt">Defaults to price. Project lost.</span></div></td>
+            <td class="diag-td good"><div class="diag-cell"><span class="diag-n">05</span><span class="diag-txt">Buyer is confident. Project won on value.</span></div></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+
+<!-- PROCESS -->
+<section id="process">
+  <div class="wrap">
+    <div class="sec-header" style="margin-bottom:48px;">
+      <span class="ov">Our approach</span>
+      <h2>A structured engagement. Three clear phases.</h2>
+    </div>
+
+    <div class="flow-bar">
+      <div class="flow-node">
+        <span class="flow-n">01</span>
+        <span class="flow-lbl">Diagnose</span>
+      </div>
+      <div class="flow-arr">
+        <svg width="22" height="12" viewBox="0 0 22 12" fill="none" aria-hidden="true">
+          <path d="M0 6H16M11 1L18 6L11 11" stroke="#CCCCCC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <div class="flow-node">
+        <span class="flow-n">02</span>
+        <span class="flow-lbl">Structure</span>
+      </div>
+      <div class="flow-arr">
+        <svg width="22" height="12" viewBox="0 0 22 12" fill="none" aria-hidden="true">
+          <path d="M0 6H16M11 1L18 6L11 11" stroke="#CCCCCC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <div class="flow-node">
+        <span class="flow-n">03</span>
+        <span class="flow-lbl">Align</span>
+      </div>
+      <div class="flow-arr">
+        <svg width="22" height="12" viewBox="0 0 22 12" fill="none" aria-hidden="true">
+          <path d="M0 6H16M11 1L18 6L11 11" stroke="#CCCCCC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <div class="flow-node dim">
+        <span class="flow-n">Result</span>
+        <span class="flow-lbl">Sales clarity</span>
+      </div>
+    </div>
+
+    <!-- Ghost numbers removed per Pentagram/Bierut -->
+    <div class="step-cards">
+      <div class="step-card">
+        <svg class="step-icon" viewBox="0 0 44 44" fill="none" aria-hidden="true">
+          <circle cx="18" cy="18" r="11" stroke="#9E2020" stroke-width="1.5" opacity="0.45"/>
+          <circle cx="18" cy="18" r="5"  stroke="#9E2020" stroke-width="1"   opacity="0.22"/>
+          <line x1="26" y1="26" x2="38" y2="38" stroke="#9E2020" stroke-width="1.5" stroke-linecap="round" opacity="0.45"/>
+        </svg>
+        <span class="step-tag">Diagnose</span>
+        <h3>Where deals break down</h3>
+        <p>We map where buyers get confused, where hesitation starts, and where decisions shift toward price. Most companies have never seen this clearly.</p>
+      </div>
+      <div class="step-card">
+        <svg class="step-icon" viewBox="0 0 44 44" fill="none" aria-hidden="true">
+          <rect x="6" y="8"  width="32" height="7" rx="1" stroke="#9E2020" stroke-width="1.5" opacity="0.5"/>
+          <rect x="6" y="19" width="32" height="7" rx="1" stroke="#9E2020" stroke-width="1.5" opacity="0.3"/>
+          <rect x="6" y="30" width="32" height="7" rx="1" stroke="#9E2020" stroke-width="1.5" opacity="0.15"/>
+        </svg>
+        <span class="step-tag">Structure</span>
+        <h3>How you are explained</h3>
+        <p>We build a clear, consistent way to present your capabilities — so any buyer can evaluate you without a conversation to fill in the gaps.</p>
+      </div>
+      <div class="step-card">
+        <svg class="step-icon" viewBox="0 0 44 44" fill="none" aria-hidden="true">
+          <circle cx="9"  cy="12" r="4" stroke="#9E2020" stroke-width="1.5" opacity="0.5"/>
+          <circle cx="9"  cy="32" r="4" stroke="#9E2020" stroke-width="1.5" opacity="0.3"/>
+          <circle cx="35" cy="22" r="4" stroke="#9E2020" stroke-width="1.5" opacity="0.5"/>
+          <line x1="13" y1="14" x2="31" y2="20" stroke="#9E2020" stroke-width="1" stroke-linecap="round" opacity="0.35"/>
+          <line x1="13" y1="30" x2="31" y2="24" stroke="#9E2020" stroke-width="1" stroke-linecap="round" opacity="0.35"/>
+        </svg>
+        <span class="step-tag">Align</span>
+        <h3>How your team sells</h3>
+        <p>Every meeting, proposal, and follow-up carries the same message. No variation. No lost context. One consistent story.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- DELIVERABLES -->
+<section id="deliverables">
+  <div class="wrap">
+    <div class="del-grid">
+      <div>
+        <span class="ov">What you receive</span>
+        <h2 class="del-heading">A system your team can use from day one.</h2>
+      </div>
+      <div class="del-items">
+        <div class="del-item">
+          <span class="del-dash">—</span>
+          <div class="del-text">
+            <h4>Capability breakdown</h4>
+            <p>Structured so any buyer can evaluate you independently — no conversation needed.</p>
+          </div>
+        </div>
+        <div class="del-item">
+          <span class="del-dash">—</span>
+          <div class="del-text">
+            <h4>Differentiation framework</h4>
+            <p>Clear articulation of what sets you apart — written for buyers, not internal use.</p>
+          </div>
+        </div>
+        <div class="del-item">
+          <span class="del-dash">—</span>
+          <div class="del-text">
+            <h4>Sales conversation guide</h4>
+            <p>A framework your team uses in every meeting and proposal. Consistent every time.</p>
+          </div>
+        </div>
+        <div class="del-item">
+          <span class="del-dash">—</span>
+          <div class="del-text">
+            <h4>Proposal messaging structure</h4>
+            <p>Written materials that reinforce the same message at every sales touchpoint.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="wrap">
+    <div class="contact-top">
+      <span class="ov">Get started</span>
+      <h2>Request a free Sales Clarity Breakdown.</h2>
+      <p>We'll show you where buyers get confused, where decisions shift to price, and where you're losing work you should be winning.</p>
+      <p class="contact-proof">Most companies find two or three clear gaps in the first conversation.</p>
+    </div>
+
+    <div class="contact-panels">
+      <div class="contact-panel">
+        <ul class="promises">
+          <li class="promise-row"><span class="promise-chk">✓</span><span class="promise-txt">No commitment required</span></li>
+          <li class="promise-row"><span class="promise-chk">✓</span><span class="promise-txt">Not a generic report — specific to your business</span></li>
+          <li class="promise-row"><span class="promise-chk">✓</span><span class="promise-txt">A direct conversation, not a sales call</span></li>
+          <li class="promise-row"><span class="promise-chk">✓</span><span class="promise-txt">Response within one business day</span></li>
+        </ul>
+        <div class="who-box">
+          <span class="who-lbl">We work with</span>
+          <ul class="who-list">
+            <li><div class="who-dot"></div>Metal fabrication &amp; machining companies</li>
+            <li><div class="who-dot"></div>Industrial manufacturing &amp; engineering services</li>
+            <li><div class="who-dot"></div>20–150 employees · Project-based businesses</li>
+            <li><div class="who-dot"></div>Vancouver &amp; Lower Mainland</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="contact-panel">
+        <div data-fs-success class="f-ok">
+          <h3>Request received.</h3>
+          <p>We'll be in touch within one business day.</p>
+        </div>
+        <div data-fs-error class="f-err" style="display:none;margin-bottom:14px;"></div>
+
+        <form id="bf-form">
+          <div class="f-group">
+            <label class="f-label" for="f-name">Name</label>
+            <input type="text" id="f-name" name="name" placeholder="Your name" autocomplete="name" data-fs-field required>
+            <span data-fs-error="name" class="f-field-err"></span>
+          </div>
+          <div class="f-group">
+            <label class="f-label" for="f-co">Company</label>
+            <input type="text" id="f-co" name="company" placeholder="Company name" autocomplete="organization" data-fs-field required>
+            <span data-fs-error="company" class="f-field-err"></span>
+          </div>
+          <div class="f-group">
+            <label class="f-label" for="f-email">Email</label>
+            <input type="email" id="f-email" name="email" placeholder="you@company.com" autocomplete="email" data-fs-field required>
+            <span data-fs-error="email" class="f-field-err"></span>
+          </div>
+          <input type="hidden" name="_subject" value="BrightFrame — Sales Clarity Breakdown Request">
+          <button type="submit" class="btn-submit" data-fs-submit-btn>Request your breakdown</button>
+          <p class="f-note">We'll reach out within one business day to arrange a call. No automated sequences.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- FOOTER — trust signal added per Ingrid Sörensen / Fjord -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <span class="footer-logo">BrightFrame</span>
+      <span class="footer-tagline">When capability isn't enough.</span>
+    </div>
+    <div class="footer-trust">
+      <span class="footer-trust-label">Contact</span>
+      <div class="footer-contact-item">
+        <span class="lbl">Based in</span>
+        Vancouver, British Columbia
+      </div>
+      <div class="footer-contact-item">
+        <span class="lbl">Serving</span>
+        Vancouver &amp; Lower Mainland
+      </div>
+      <div class="footer-contact-item">
+        <span class="lbl">Email</span>
+        hello@brightframe.ca
+      </div>
+    </div>
+  </div>
+  <div class="footer-btm">
+    <span class="footer-loc">Sales Clarity Consulting · Industrial B2B · Vancouver BC</span>
+    <span class="footer-loc">© 2025 BrightFrame</span>
+  </div>
+</footer>
+
+
+<script>
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const t = document.querySelector(a.getAttribute('href'));
+    if (t) { e.preventDefault(); t.scrollIntoView({ behavior:'smooth', block:'start' }); }
+  });
+});
+
+window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
+formspree('initForm', { formElement: '#bf-form', formId: 'xqenlgga' });
+</script>
+<script src="https://unpkg.com/@formspree/ajax@1" defer></script>
+</body>
+</html>
